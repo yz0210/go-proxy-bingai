@@ -27,7 +27,7 @@ const selectSydneyConfig = (config: SydneyConfig) => {
 
 const handleChangeSydneyConfig = (config: SydneyConfig) => {
   if (!config.baseUrl) {
-    config.baseUrl="https://newbing.2414769512.workers.dev/"
+    config.baseUrl = 'https://newbing.2414769512.workers.dev/'
     return;
   }
   if (!config.baseUrl.startsWith('https://')) {
@@ -49,7 +49,7 @@ const handleChangeSydneyConfig = (config: SydneyConfig) => {
             <NInput class="lg:hidden" v-if="config.isCus" v-model:value="config.baseUrl" placeholder="自定义聊天服务器链接" @change="handleChangeSydneyConfig(config)"></NInput>
           </td>
           <td class="hidden lg:table-cell">
-            <NInput v-if="config.isCus" v-model:value="config.baseUrl" placeholder="https://newbing.2414769512.workers.dev/" @change="handleChangeSydneyConfig(config)"></NInput>
+            <NInput v-if="config.isCus" v-model:value="config.baseUrl" placeholder="自定义聊天服务器链接" @change="handleChangeSydneyConfig(config)"></NInput>
             <span v-else>{{ config.baseUrl }}</span>
           </td>
           <td>
