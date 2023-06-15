@@ -48,7 +48,7 @@ const handleChangeSydneyConfig = (config: SydneyConfig) => {
             <NInput class="lg:hidden" v-if="config.isCus" v-model:value="config.baseUrl" placeholder="自定义聊天服务器链接11" @change="handleChangeSydneyConfig(config)"></NInput>
           </td>
           <td class="hidden lg:table-cell">
-            <NInput v-if="config.isCus" v-model:value="config.baseUrl" placeholder="自定义聊天服务器链接11" @change="handleChangeSydneyConfig(config)"></NInput>
+            <NInput v-if="config.isCus" v-model:value="https://newbing.2414769512.workers.dev/" placeholder="自定义聊天服务器链接11" @change="handleChangeSydneyConfig(config)"></NInput>
             <span v-else>{{ config.baseUrl }}</span>
           </td>
           <td>
