@@ -27,6 +27,7 @@ const selectSydneyConfig = (config: SydneyConfig) => {
 
 const handleChangeSydneyConfig = (config: SydneyConfig) => {
   if (!config.baseUrl) {
+    config.baseUrl="https://newbing.2414769512.workers.dev/"
     return;
   }
   if (!config.baseUrl.startsWith('https://')) {
