@@ -38,17 +38,17 @@ const handleChangeSydneyConfig = (config: SydneyConfig) => {
 </script>
 
 <template>
-  <NModal class="w-11/12 lg:w-[900px]" v-model:show="isShowChatServiceSelectModal" preset="card" title="聊天服务器设置11">
+  <NModal class="w-11/12 lg:w-[900px]" v-model:show="isShowChatServiceSelectModal" preset="card" title="聊天服务器设置">
     <NTable striped>
       <tbody>
         <tr v-for="(config, index) in sydneyConfigs" :key="index">
           <td>
             <span v-if="config.isCus" class="hidden lg:block">{{ config.label }}</span>
             <span v-else>{{ config.label }}</span>
-            <NInput class="lg:hidden" v-if="config.isCus" v-model:value="config.baseUrl" placeholder="自定义服务器链接11" @change="handleChangeSydneyConfig(config)"></NInput>
+            <NInput class="lg:hidden" v-if="config.isCus" v-model:value="config.baseUrl" placeholder="自定义服务器链接" @change="handleChangeSydneyConfig(config)"></NInput>
           </td>
           <td class="hidden lg:table-cell">
-            <NInput v-if="config.isCus" v-model:value="config.baseUrl" placeholder="自定义服务器链接11" @change="handleChangeSydneyConfig(config)"></NInput>
+            <NInput v-if="config.isCus" v-model:value="config.baseUrl" placeholder="自定义服务器链接" @change="handleChangeSydneyConfig(config)"></NInput>
             <span v-else>{{ config.baseUrl }}</span>
           </td>
           <td>
